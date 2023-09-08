@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.css'
-import 'tailwindcss/tailwind.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Landingpage from './pages/Landingpage.jsx';
 
 function App() {
-
+  
   return (
-    <>
-      <div className="bg-blue-500">
-       <h1 className="text-3xl font-light underline">
-      Hello world!
-    </h1>
-    </div>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Landingpage />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
-export default App
+export default App;
